@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5948737829218530242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856490620572760000, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0756149
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856490620572760000, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0683167
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856490620572760000, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856490620572760000, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0036497116
+      objectReference: {fileID: 0}
+    - target: {fileID: 7093376118195510711, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_Name
+      value: MaceCubePatrol
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1261933607335244289, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+    - {fileID: 3961656534125241276, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7093376118195510711, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2155567452688020068}
+  m_SourcePrefab: {fileID: 100100000, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+--- !u!1 &3530420197489372789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7093376118195510711, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+  m_PrefabInstance: {fileID: 5948737829218530242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2155567452688020068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530420197489372789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0311b7d97b8fdd49ad20412b530ffd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 5
+  _damage: 3
+  _speed: 2
+  _detectionRadius: 10
+  _attackRadius: 3
+  _player: {fileID: 0}
+  _waypoints: []
