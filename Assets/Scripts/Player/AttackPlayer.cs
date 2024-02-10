@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent (typeof(Player))]
 public class AttackPlayer : MonoBehaviour
 {
     [SerializeField] private Player _player;

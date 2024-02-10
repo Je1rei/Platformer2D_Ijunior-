@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(WalletPlayer), typeof(Coin))]
 public class CoinPicker : MonoBehaviour
 {
-    private const string _coinTag = "Coin";
-
+    [SerializeField] private Coin _coin;
     [SerializeField] private WalletPlayer _wallet;
 
     private void Awake()
@@ -15,10 +13,8 @@ public class CoinPicker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == _coinTag)
+        if (collision.gameObject.TryGetComponent(out Coin coin))
         {
-            Coin coin = collision.gameObject.GetComponent<Coin>();
-
             _wallet.IncreaseCoins(coin.Value);
             Destroy(collision.gameObject);
         }

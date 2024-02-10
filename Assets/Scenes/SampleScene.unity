@@ -5197,6 +5197,8 @@ GameObject:
   - component: {fileID: 1268054715}
   - component: {fileID: 1268054717}
   - component: {fileID: 1268054716}
+  - component: {fileID: 1268054721}
+  - component: {fileID: 1268054720}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5409,6 +5411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7db91676a7c0404dbe6ccc9a6c1ad5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _medicineChest: {fileID: 7011534404172256131, guid: 4ca44b0b9af0f204080efdc48fb4aa18, type: 3}
   _healthPlayer: {fileID: 1268054719}
 --- !u!114 &1268054716
 MonoBehaviour:
@@ -5435,6 +5438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b1071afee830c418d966c497fd6f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coin: {fileID: 7965140417655704849, guid: 6173812583ee1a14bbdf3baf91b153c7, type: 3}
   _wallet: {fileID: 1268054716}
 --- !u!114 &1268054718
 MonoBehaviour:
@@ -5462,6 +5466,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 5
+--- !u!114 &1268054720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08345772402ac4148a619f20adab9988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+--- !u!114 &1268054721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8edbf4d1985ad4fa6203e8efa857bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
 --- !u!114 &1346622742 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1713806672232864107, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}

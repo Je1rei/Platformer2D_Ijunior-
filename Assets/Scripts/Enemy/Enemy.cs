@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -63,7 +62,7 @@ public class Enemy : MonoBehaviour
 
     private void FlipSprite()
     {
-        _spriteRenderer.flipX = _currentPoint % 2 == 0 ? true : false;
+        _spriteRenderer.flipX = _currentPoint % 2 == 0;
     }
 
     private void MoveTowardsPlayer()

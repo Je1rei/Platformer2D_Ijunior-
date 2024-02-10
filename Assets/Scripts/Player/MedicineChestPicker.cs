@@ -1,24 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(HealthPlayer), typeof(MedicineChest))]
 public class MedicineChestPicker : MonoBehaviour
 {
-    private const string _medicineChestTag = "MedicineChest";
-
+    [SerializeField] private MedicineChest _medicineChest;
     [SerializeField] private HealthPlayer _healthPlayer;
 
     private void Awake()
     {
-        _healthPlayer = GetComponent<HealthPlayer>();    
+        _healthPlayer = GetComponent<HealthPlayer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == _medicineChestTag)
+        if (collision.gameObject.TryGetComponent(out MedicineChest medicineChest))
         {
-            MedicineChest medicineChest = collision.gameObject.GetComponent<MedicineChest>();
-
             _healthPlayer.Heal(medicineChest.Value);
             Destroy(collision.gameObject);
         }
