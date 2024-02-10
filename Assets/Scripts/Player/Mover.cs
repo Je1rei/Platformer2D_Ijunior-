@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D))]
-public class PhysicsMovement : MonoBehaviour
+public class Mover : MonoBehaviour
 {
-    private readonly string _horizontal = "Horizontal";
-    private readonly string _jump = "Jump";
-    private readonly string _groundLayer = "Ground";
+    private const string _horizontal = "Horizontal";
+    private const string _jump = "Jump";
+    private const string _groundLayer = "Ground";
 
     [SerializeField] private Transform _groundCheckPoint;
     [SerializeField] private float _radiusOverlap = 0.5f;

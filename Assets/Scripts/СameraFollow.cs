@@ -7,19 +7,19 @@ public class СameraFollow : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = CheckPosition();
+        transform.position = ChangePosition();
     }
 
     private void Update()
     {
-        Vector3 target = CheckPosition();
+        Vector3 target = ChangePosition();
 
         Vector3 pos = Vector3.Lerp(transform.position, target, _movingSpeed * Time.deltaTime);
 
         transform.position = pos;
     }
 
-    private Vector3 CheckPosition()
+    private Vector3 ChangePosition()
     {
         float offsetCamera = 10;
 

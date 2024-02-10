@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 6068574290459680893}
   - component: {fileID: 2827926422119144821}
   - component: {fileID: 8811171502253834225}
-  - component: {fileID: 171527871274687028}
   - component: {fileID: 8471713506300114350}
+  - component: {fileID: -7324437836921139373}
+  - component: {fileID: -4393449249615727678}
   m_Layer: 0
   m_Name: Mace
   m_TagString: Untagged
@@ -132,19 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.475, y: 0.45}
   m_EdgeRadius: 0
---- !u!114 &171527871274687028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772028422179806032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb72e3b16c1b7d143bc22740394e7bc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 5
 --- !u!50 &8471713506300114350
 Rigidbody2D:
   serializedVersion: 4
@@ -172,3 +160,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7324437836921139373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772028422179806032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0311b7d97b8fdd49ad20412b530ffd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 0
+  _speed: 0
+  _detectionRadius: 0
+  _player: {fileID: 0}
+  _waypoints: []
+--- !u!114 &-4393449249615727678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772028422179806032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7cd857d33499444598f7e7fb3d6ce02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: -7324437836921139373}

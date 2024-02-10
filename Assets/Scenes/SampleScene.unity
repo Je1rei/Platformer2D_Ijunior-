@@ -395,6 +395,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ca44b0b9af0f204080efdc48fb4aa18, type: 3}
+--- !u!114 &382581894 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1713806672232864107, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}
+  m_PrefabInstance: {fileID: 966893851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0311b7d97b8fdd49ad20412b530ffd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &397315290
 GameObject:
   m_ObjectHideFlags: 0
@@ -4634,6 +4645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaceCubePatrolWaypoints
       objectReference: {fileID: 0}
+    - target: {fileID: 3244811162420049958, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 1346622742}
     - target: {fileID: 3558037946831341301, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5
@@ -4873,6 +4888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaceCubePatrolWaypoints (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3244811162420049958, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 382581894}
     - target: {fileID: 3558037946831341301, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.61
@@ -5136,10 +5155,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183397099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98e267cc0cdc46428a6baf49785c79c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3dbfa40c64774734682a29da81182008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coin: {fileID: -4646231425051216627, guid: 6173812583ee1a14bbdf3baf91b153c7, type: 3}
+  _coin: {fileID: 7965140417655704849, guid: 6173812583ee1a14bbdf3baf91b153c7, type: 3}
   _spawnPoints:
   - {fileID: 916415586}
   - {fileID: 1006500868}
@@ -5173,9 +5192,14 @@ GameObject:
   - component: {fileID: 1268054712}
   - component: {fileID: 1268054711}
   - component: {fileID: 1268054714}
+  - component: {fileID: 1268054719}
+  - component: {fileID: 1268054718}
+  - component: {fileID: 1268054715}
+  - component: {fileID: 1268054717}
+  - component: {fileID: 1268054716}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5283,12 +5307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d7b2863f90aff4a98414cc6415b3a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movement: {fileID: 1268054714}
+  _mover: {fileID: 1268054714}
   _damage: 3
-  _health: 10
   _speed: 5
   _jumpForce: 140
-  _coins: 0
 --- !u!61 &1268054712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5375,6 +5397,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _groundCheckPoint: {fileID: 1048513736}
   _radiusOverlap: 0.5
+--- !u!114 &1268054715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7db91676a7c0404dbe6ccc9a6c1ad5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPlayer: {fileID: 1268054719}
+--- !u!114 &1268054716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ff55796824bb24f9b1addce2a3f7ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coins: 0
+--- !u!114 &1268054717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b1071afee830c418d966c497fd6f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallet: {fileID: 1268054716}
+--- !u!114 &1268054718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e9af09d6c250e4a90429c106c89edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1268054711}
+--- !u!114 &1268054719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268054707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d640ff02315e4674eae8efded9ef9f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 5
+--- !u!114 &1346622742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1713806672232864107, guid: b4fa63e5ecd502b45a9662bd6eb48504, type: 3}
+  m_PrefabInstance: {fileID: 834823864}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0311b7d97b8fdd49ad20412b530ffd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1357040327
 GameObject:
   m_ObjectHideFlags: 0

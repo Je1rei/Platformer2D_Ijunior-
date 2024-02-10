@@ -68,9 +68,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaceCubePatrol
       objectReference: {fileID: 0}
+    - target: {fileID: 8479007325523665131, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: _enemy
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1261933607335244289, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
     - {fileID: 3961656534125241276, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+    - {fileID: -1125784299870485949, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -95,10 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0311b7d97b8fdd49ad20412b530ffd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 5
   _damage: 3
   _speed: 2
   _detectionRadius: 10
-  _attackRadius: 3
   _player: {fileID: 0}
   _waypoints: []
