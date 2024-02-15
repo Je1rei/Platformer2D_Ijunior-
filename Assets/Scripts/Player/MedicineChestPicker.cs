@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[RequireComponent (typeof(HealthPlayer), typeof(MedicineChest))]
+[RequireComponent (typeof(Health), typeof(MedicineChest))]
 public class MedicineChestPicker : MonoBehaviour
 {
     [SerializeField] private MedicineChest _medicineChest;
-    [SerializeField] private HealthPlayer _healthPlayer;
+    [SerializeField] private Health _healthPlayer;
 
     private void Awake()
     {
-        _healthPlayer = GetComponent<HealthPlayer>();
+        _healthPlayer = GetComponent<Health>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

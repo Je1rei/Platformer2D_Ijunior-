@@ -12,9 +12,14 @@ public class AttackPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.TryGetComponent(out HealthEnemy healthEnemy))
+        if (other.gameObject.TryGetComponent(out Health healthEnemy))
         {
             healthEnemy.TakeDamage(_player.Damage);
+
+            if (healthEnemy.Value <= healthEnemy.MinValue) 
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 }

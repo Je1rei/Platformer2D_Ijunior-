@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -553059271511796559, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: _health
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5671613909428612393, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -100,8 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0311b7d97b8fdd49ad20412b530ffd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 3
+  _damage: 50
   _speed: 2
-  _detectionRadius: 10
+  _detectionRadius: 5
   _player: {fileID: 0}
   _waypoints: []

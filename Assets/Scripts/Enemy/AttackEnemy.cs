@@ -12,7 +12,7 @@ public class AttackEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.TryGetComponent(out HealthPlayer healthPlayer))
+        if (other.gameObject.TryGetComponent(out Health healthPlayer))
         {
             healthPlayer.TakeDamage(_enemy.Damage);
         }
