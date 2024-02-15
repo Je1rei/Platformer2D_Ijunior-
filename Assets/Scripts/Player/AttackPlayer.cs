@@ -15,11 +15,6 @@ public class AttackPlayer : MonoBehaviour
         if (other.gameObject.TryGetComponent(out Health healthEnemy))
         {
             healthEnemy.TakeDamage(_player.Damage);
-
-            if (healthEnemy.Value <= healthEnemy.MinValue) 
-            {
-                Destroy(other.gameObject);
-            }
         }
     }
 }

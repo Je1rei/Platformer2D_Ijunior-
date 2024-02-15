@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -7,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _detectionRadius;
 
+    [SerializeField] private Health _health;
     [SerializeField] private Transform _player;
     [SerializeField] private Transform[] _waypoints;
 
@@ -16,6 +18,11 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     public int Damage { get; private set; }
+
+    private void OnEnable()
+    {
+        _health.ReachedZero += OnDestroyEnemy;
+    }
 
     private void Awake()
     {
@@ -30,10 +37,15 @@ public class Enemy : MonoBehaviour
     {
         MoveTowardsPlayer();
 
-        if (_isPatrol == true) 
+        if (_isPatrol == true)
         {
-            Patrol(); 
+            Patrol();
         }
+    }
+
+    private void OnDisable()
+    {
+        _health.ReachedZero -= OnDestroyEnemy;
     }
 
     private void Patrol()
@@ -80,6 +92,14 @@ public class Enemy : MonoBehaviour
             {
                 _isPatrol = true;
             }
+        }
+    }
+
+    private void OnDestroyEnemy(int health)
+    {
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

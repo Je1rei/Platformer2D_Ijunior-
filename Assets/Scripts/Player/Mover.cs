@@ -42,7 +42,7 @@ public class Mover : MonoBehaviour
         }
     }
 
-    public bool CheckGround()
+    private bool CheckGround()
     {
         LayerMask groundLayer = LayerMask.GetMask(_groundLayer);
         return Physics2D.OverlapCircle(_groundCheckPoint.position, _radiusOverlap, groundLayer);

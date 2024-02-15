@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0036497116
       objectReference: {fileID: 0}
+    - target: {fileID: 6629204632334297549, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895861516049975159, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7093376118195510711, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
       propertyPath: m_Name
       value: MaceCubePatrol
@@ -107,5 +115,17 @@ MonoBehaviour:
   _damage: 50
   _speed: 2
   _detectionRadius: 5
+  _health: {fileID: 7239937544688353570}
   _player: {fileID: 0}
   _waypoints: []
+--- !u!114 &7239937544688353570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -5262661364172295456, guid: 2ace95834b0c5f94faa3c03860726006, type: 3}
+  m_PrefabInstance: {fileID: 5948737829218530242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530420197489372789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9888f5567ca160d4b83561c20f029451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

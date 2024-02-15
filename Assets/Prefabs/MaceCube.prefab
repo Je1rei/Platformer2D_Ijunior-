@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6629204632334297549}
   - component: {fileID: 4451600324468646825}
   - component: {fileID: 8357932313873038875}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &4451600324468646825
 MonoBehaviour:
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3972662750633558688}
   - component: {fileID: 1052041099214240625}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: -1125784299870485949}
   - component: {fileID: 8479007325523665131}
   - component: {fileID: 8010432198708775580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MaceCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2c485f404f6b79e46bf40f28682b23d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -384,6 +384,7 @@ MonoBehaviour:
   _damage: 50
   _speed: 3
   _detectionRadius: 0
+  _health: {fileID: -5262661364172295456}
   _player: {fileID: 0}
   _waypoints: []
 --- !u!114 &8479007325523665131
@@ -423,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4236008801076300737}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +462,7 @@ GameObject:
   - component: {fileID: 6895861516049975159}
   - component: {fileID: 3871108886350315825}
   - component: {fileID: 7970340649932270988}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +537,7 @@ GameObject:
   - component: {fileID: 345636073501940982}
   - component: {fileID: 736923776670151071}
   - component: {fileID: 7347472116916442578}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int _minValue = 0;
 
     public event Action<int> Changed;
+    public event Action<int> ReachedZero;
 
     public int MaxValue { get; private set; }
     public int Value => _value;
@@ -24,6 +25,8 @@ public class Health : MonoBehaviour
         _value -= damage;
         _value = Mathf.Clamp(_value, _minValue, MaxValue);
         Changed?.Invoke(_value);
+
+        ReachedZero?.Invoke(_value);
     }
 
     public void Heal(int healValue)
